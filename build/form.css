@@ -7,4 +7,3 @@ input,button,textarea,select,label {margin:0; font:12px tahoma,arial,simsun,sans
 button::-moz-focus-inner,input::-moz-focus-inner {border:0; padding:0}
 textarea {resize:vertical; overflow-y:auto; vertical-align:top}
 select {height:22px; line-height:18px; padding:2px 0}
-option {background:#fff}
