@@ -1,0 +1,161 @@
+background: 0;
+background-attachment: scroll;
+background-clip: border-box;
+background-color: transparent;
+background-image: none;
+background-origin: padding-box;
+background-position: 0 0;
+background-repeat: repeat;
+background-size: auto auto;
+
+margin: 0;
+margin-bottom: 0;
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+max-height: none;
+max-width: none;
+
+padding: 0;
+padding-bottom: 0;
+padding-left: 0;
+padding-right: 0;
+padding-top: 0;
+
+border: 0;
+border-width: medium;
+border-style: none;
+border-color: inherit;
+border-top: 0;
+border-right: 0;
+border-bottom: 0;
+border-left: 0;
+border-top-width: medium;
+border-top-style: none;
+border-top-color: inherit;
+border-right-width: medium;
+border-right-style: none;
+border-right-color: inherit;
+border-bottom-width: medium;
+border-bottom-style: none;
+border-bottom-color: inherit;
+border-left-width: medium;
+border-left-style: none;
+border-left-color: inherit;
+
+border-radius: 0;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+border-image: none;
+
+box-shadow: none;
+box-sizing: content-box;
+
+font: normal;
+font-family: inherit;
+font-size: medium;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: normal;
+
+white-space: normal;
+word-spacing: normal;
+letter-spacing: normal;
+unicode-bidi: normal;
+
+color: inherit;
+
+text-align: inherit;
+text-decoration: none;
+text-decoration-color: inherit;
+text-decoration-line: none;
+text-decoration-style: solid;
+text-indent: 0;
+text-shadow: none;
+text-transform: none;
+
+outline: 0;
+outline-color: invert;
+outline-style: none;
+outline-width: medium;
+
+list-style: none;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: disc;
+
+table-layout: auto;
+border-collapse: separate;
+border-spacing: 0;
+caption-side: top;
+empty-cells: show;
+
+display: inline;
+vertical-align: baseline;
+
+width: auto;
+height: auto;
+min-height: 0;
+min-width: 0;
+opacity: 1;
+float: none;
+position: static;
+z-index: auto;
+top: auto;
+right: auto;
+bottom: auto;
+left: auto;
+clip: auto;
+overflow: visible;
+visibility: visible;
+clear: none;
+content: normal;
+counter-increment: none;
+counter-reset: none;
+cursor: auto;
+direction: ltr;
+quotes: '\201C' '\201D' '\2018' '\2019';
+
+tab-size: 8;
+hyphens: none;
+orphans: 0;
+widows: 0;
+page-break-after: auto;
+page-break-before: auto;
+page-break-inside: auto;
+
+animation: none;
+animation-delay: 0;
+animation-direction: normal;
+animation-duration: 0;
+animation-fill-mode: none;
+animation-iteration-count: 1;
+animation-name: none;
+animation-play-state: running;
+animation-timing-function: ease;
+backface-visibility: visible;
+
+columns: auto;
+column-count: auto;
+column-fill: balance;
+column-gap: normal;
+column-rule: medium none currentColor;
+column-rule-color: currentColor;
+column-rule-style: none;
+column-rule-width: none;
+column-span: 1;
+column-width: auto;
+
+transform: none;
+transform-style: flat;
+transition: none;
+transition-delay: 0;
+transition-duration: 0;
+transition-property: none;
+transition-timing-function: ease;
+
+perspective: none;
+perspective-origin: 50% 50%;

@@ -1,0 +1,68 @@
+/*
+(CC) 2012, Jony (www.niceue.com), MIT Licensed
+*/
+
+/*
+ * 移除大部分情况下不需要或者各浏览器表现不够统一的margin、padding
+ * 1. 除了IE6/7默认margin:15px 10px，其他浏览器均为margin:8px，body的margin不一定是预期，直接移除
+ * 2. 有margin，且IE6/7与其他浏览器不一致，全部移除
+ * 3. IE6/7/8/9与其他浏览器margin和padding不一致，全部移除
+ * 4. IE6/7与其他浏览器font-size和margin值均不相同，全部移除margin
+ * 5. IE6/7下caption有padding值，移除
+ * 6. IE6/7下form有margin值，移除
+ * 7. padding和margin在各浏览器均不相同，全部移除
+ */
+body,   /*1*/
+p,blockquote,dl,dd, /*2*/
+ul,ol,  /*3*/
+h1,h2,h3,h4,h5,h6,  /*4*/
+caption,    /*5*/
+form,   /*6*/
+fieldset,legend /*7*/
+{
+    margin:0; padding:0
+}
+
+
+/*
+ * 1. 定义全局字体
+ * 2. 修正这些表单元素不能继承字体样式
+ */
+body,   /*1*/
+input,select,button,textarea /*2*/
+{
+    font:12px/1.5 tahoma,arial
+}
+
+
+/*
+ * 移除列表元素的默认样式
+ */
+ul,ol {
+    list-style:none;
+}
+
+
+/*
+ * 移除默认边框
+ * 注：IE下img被链接时出现边框
+ */
+img,iframe,fieldset {
+    border:0;
+}
+
+
+/*
+ * 合并表格边框
+ */
+table {
+    border-collapse:collapse;
+}
+
+
+/*
+ * 去除链接默认的下划线
+ */
+a {
+    text-decoration:none;
+}

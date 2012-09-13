@@ -1,0 +1,9 @@
+/*
+(CC) 2012, Jony (www.niceue.com), MIT Licensed
+*/
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,blockquote,caption,form,fieldset,legend {margin:0; padding:0}
+body,input,select,button,textarea {font:12px/1.5 tahoma,arial}
+ul,ol {list-style:none}
+img,iframe,fieldset {border:0}
+table {border-collapse:collapse}
+a {text-decoration:none}

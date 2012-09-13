@@ -1,0 +1,68 @@
+/*
+(CC) 2012, Jony (www.niceue.com), MIT Licensed
+*/
+
+/*
+ * 定义各浏览器显示一致的样式
+ */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+
+/*
+ * 1. 纠正IE6, FF下padding不正确
+ * 2. 纠正IE6/7下对齐方式不一样
+ */
+legend {
+    padding:0 2px;  /*1*/
+    *margin-left:-7px;  /*2*/
+}
+
+
+/*
+ * 1. 去除IE6/7, FF3+, S5, Chrome默认的margin
+ * 2. 解决IE6/7不能继承字体样式
+ * 3. 在不同浏览器，label与input(特别是checkbox和radio)总是不能对齐，这里统一了各个浏览器的表现
+ */
+input,button,textarea,select,label {
+    margin:0;  /*1*/
+    font-size:100%;  /*2*/
+    vertical-align:middle;  /*3*/
+}
+
+
+/*
+ * 去除FF3+内补丁和内边框
+ */
+button::-moz-focus-inner,input::-moz-focus-inner {
+    border:0; 
+    padding:0;
+}
+
+
+/*
+ * 1. 让FF,S5,Chrome下的textarea只能纵向拉伸高度, 避免因拉伸而影响布局
+ * 2. 去掉IE下默认的滚动条占位
+ * 3. 默认textarea与文本baseline对齐，导致文本沉在下面比较难看，这里统一与文本顶对齐
+ */
+textarea {
+    resize:vertical; /*1*/
+    overflow:auto; /*2*/
+    vertical-align:top; /*3*/
+}
+
+
+/*
+ * 1. IE6/7 默认22px并且IE6下无法设置select高度, 这里统一为22px
+ * 2. Sa 有默认padding:2px 0， 无法设置高度，但是可以设置line-height
+ * 3. IE8/9、ff、ch、op 无法设置line-height，但可以设置height和padding，而且padding不影响height
+ *    注：select 参见：test/select，在不同浏览器查看
+ */
+select {
+    height:22px;  /*1*/
+    line-height:18px;  /*2*/
+    padding:2px 0;  /*2*3*/  
+}

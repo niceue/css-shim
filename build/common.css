@@ -1,0 +1,34 @@
+/*
+(CC) 2012, Jony (www.niceue.com), MIT Licensed
+*/
+/* Layout */
+.cf {*zoom:1} .cf:after {display:block;content:'\20';height:0;clear:both}
+.inline-block {display:inline-block; *display:inline; *zoom:1}
+.hide {display:none !important}
+.hiding {position:absolute !important; clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px);}
+.invisible {visibility:hidden}
+.fl {float:left;_display:inline}
+.fr {float:right;_display:inline}
+
+/* Alignment */
+.tal {text-align:left}
+.tar {text-align:right}
+.tac {text-align:center}
+.vat {vertical-align:top}
+.vam {vertical-align:middle}
+
+/* Font */
+.fw4 {font-weight:400}
+.fw7 {font-weight:700}
+.fs12 {font-size:12px}
+.fs14 {font-size:14px}
+.fs18 {font-size:18px}
+
+/* Color */
+.red,.red a {color:#f00}
+.green,.green a {color:#090}
+.yellow,.yellow a {color:#f90}
+.blue,.blue a {color:#06f}
+.white,.white a {color:#fff}
+.gray,.gray a {color:#999}
+.black,.black a {color:#000}

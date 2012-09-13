@@ -1,0 +1,63 @@
+/*
+(CC) 2012, Jony (www.niceue.com), MIT Licensed
+*/
+
+/*
+ * 纠正IE6/7/8下block元素未定义
+ */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{
+    display:block;
+}
+
+
+/*
+ * 纠正IE6/7/8下inline-block元素未定义
+ */
+audio,canvas,video{
+    display:inline-block; 
+    *display:inline; *zoom:1;
+}
+
+
+/*
+ * 1. 防止没设置controls的audio显示出来
+ * 2. 去除ios5中额外的高度
+ */
+audio:not([controls]) {
+    display:none;  /*1*/
+    height:0;  /*2*/
+}
+
+
+/*
+ * 纠正IE7/8，FF3，S4下hidden属性显示不正确
+ * 注：IE6不支持
+ */
+[hidden] {
+    display:none;
+}
+
+
+/*
+ * 纠正IE9中overflow不正确
+ */
+svg:not(:root){
+    overflow:hidden;
+}
+
+
+/*
+ * 去除默认margin
+ */
+figure{
+    margin:0;
+}
+
+
+/*
+ * 纠正IE6/7/8样式不正确
+ */
+mark{
+    background:#ff0;
+    color:#000;
+}

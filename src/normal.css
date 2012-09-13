@@ -1,0 +1,227 @@
+/*
+ * normal.css
+ * Nice比较推崇的核心样式文件，以统一浏览器基础表现和减小开发难度为目的
+ * (CC) 2012, Jony (www.niceue.com), MIT Licensed
+ */
+/*
+ * Nice会一直围绕3点开发:
+    1. 统一的基础表现
+    2. 更小的开发难度
+    3. 更好的用户体验
+
+   Nice参考了一些有名的框架，如normalize、minimum-page、YUI、kissy，
+   好的东西会经过测试后吸收过来，每一个元素都经过了主流浏览器的测试，不会想当然的编写代码
+   当然，Nice也不是完美的，如果大家发现了问题，欢迎指正。
+   可以通过mail（zj86@foxmail.com） 或者到git（https://github.com/niceue/Nice）提交issue
+
+   注释说明中，“IE”指代“Internet Explorer”，“Ch”指代“Google Chrome”，“FF”指代“Firefox”，“Op”指代“Opera”，“Sa”指代Safari
+ */
+
+
+@charset "utf-8";
+
+/*
+ * 导入html5元素的定义
+ * 参考自normalize.css 及 html5shiv (http://html5shim.googlecode.com/svn/trunk/html5.js)
+ * 注: 请选择性使用, 如果已经在head区域使用了html5shiv, 则不需要引用html5.css
+ *     实际应用中如果用到html5应该直接写进来，而不是@import
+ */
+@import "html5.css";
+
+
+/*
+ * 1. 10px = 1em = 100% = 8pt
+ */
+html {
+    font-size:62.5%;  /*1*/
+}
+
+
+/*
+ * 1. 全局字体设置(兼容中/英文操作系统，兼容utf-8及gbk编码)
+ * 2. 相对于html的字体大小，IE9+ & !IE 支持该属性 (注:为了兼容IE6-8，前面需加上px的字体大小)
+ * 3. IE中默认字体颜色是#282828，比纯黑和谐好看，这里进行统一
+ */
+body {
+    font:12px/1.5 tahoma,arial,simsun,sans-serif;  /*1*/
+    font-size:1.2rem;  /*2*/
+    color:#282828;  /*3*/
+}
+
+
+/*
+ * 移除大部分情况下不需要或者各浏览器表现不够统一的margin、padding
+ * 1. 除了IE6/7默认margin:15px 10px，其他浏览器均为margin:8px，body的margin不一定是预期，直接移除
+ * 2. IE6/7与其他浏览器margin表现不一致，先移除
+ * 3. IE6/7/8/9与其他浏览器margin和padding不一致，先移除
+ * 4. IE6/7下form有margin，直接移除
+ * 5. IE6/7下caption有padding值，直接移除
+ */
+body,   /*1*/
+p,blockquote,dl,dd,  /*2*/
+ul,ol,  /*3*/
+form,   /*4*/
+caption /*5*/
+{
+    margin:0;
+    padding:0;
+}
+
+
+/*
+ * 1. 防止IE下img被链接时出现边框
+ * 2. 解决在IE6/7 <img>底部出现3px间隙
+ * 3. 解决在IE7图片缩放会变得失真
+ */
+img {
+    border:0;   /*1*/
+    vertical-align:middle;  /*2*/
+    -ms-interpolation-mode:bicubic; /*3*/
+}
+
+
+/*
+ * 1. 清除iframe默认的2px边框
+ *    已知问题: IE6/7/8无法通过样式清除border,必须设置属性“frameborder=0”
+ * 2. 解决在HTML5的docype下(<!doctype html>)，IE8/9,Ch,Sa,FF,Op底部有间隙
+ *    注：vertical-align:bottom也可以, 或者display:block,但w3c的定义以及所有浏览器表现都为inline (参见：test/iframe)
+ */
+iframe {
+    border:0;   /*1*/
+    vertical-align:top; /*2*/
+}
+
+
+/*
+ * 使用合并单元格边框的方式移除单元格间距
+ */
+table {
+    border-collapse:collapse;
+}
+
+
+/*
+ * 文章中常用的块元素保持间距
+ * 注：dl在各浏览器也有margin，但我们一般用来布局，而不是出现在文章中，所以前面置零后这里不再定义
+ */
+ul,ol,p {
+    margin-bottom:1em;
+}
+li ul,li ol {
+    margin:0;
+}
+
+
+/*
+ * 统一列表元素左padding
+ */
+ul,ol {
+    padding-left:40px;
+}
+
+
+/*
+ * 纠正IE6/7下margin值不一样，并且移除顶部margin
+ */
+blockquote {
+    margin:0 40px 1em;
+}
+
+
+/*
+ * 提高<pre>标记内文本的可读性,IE7及更早浏览器不支持pre-wrap
+ */
+pre {
+    white-space:pre;
+    word-wrap:break-word;
+}
+
+
+/*
+ * 斜体扶正
+ */
+address,cite,dfn,em,var{
+    font-style:normal;
+}
+
+
+/*
+ * 统一等宽字体
+ */
+code,kbd,pre,samp {
+    font-family:'courier new',monospace;
+}
+
+
+/*
+ * 统一引用标记
+ */
+q:before,q:after{
+    content:'';
+}
+
+
+/*
+ * 防止上标和下标影响行高(gist.github.com/413930)
+ */
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+
+
+/*
+ * 1. 去除IE6/7, FF3+, Sa5, Ch默认的margin
+ * 2. 解决IE6/7不能继承字体样式
+ * 3. 在不同浏览器，label与input(特别是checkbox和radio)总是不能对齐，这里统一了各个浏览器的表现
+ */
+input,button,textarea,select,label {
+    margin:0;  /*1*/
+    font-size:100%;  /*2*/
+    vertical-align:middle;  /*3*/
+}
+
+
+/*
+ * 1. 让FF,Sa5,Ch下的textarea只能纵向拉伸高度, 避免因拉伸而影响布局
+ * 2. 去掉IE下默认的滚动条占位
+ * 3. 默认textarea与文本baseline对齐，导致文本沉在下面比较难看，这里统一与文本顶对齐
+ */
+textarea {
+    resize:vertical;  /*1*/
+    overflow:auto;  /*2*/
+    vertical-align:top;  /*3*/
+}
+
+
+/*
+ * 基本的链接样式
+ */
+a {text-decoration:none}
+a:hover {text-decoration:underline}
+
+
+/*
+ * 纠正IE6/7下h1~h6的font-size和margin与其他浏览器表现不同
+ * 1. h6字体(12px * 0.67 = 8px)太小看不清楚，保持和h5字体(12px * 0.83 = 10px)一致
+ *    注：实际上h5与h6很少会用到
+ */
+h1 {
+    font-size:2em; 
+    margin:0.67em 0;
+}
+h2 {
+    font-size:1.5em; 
+    margin:0.83em 0;
+}
+h3 {
+    font-size:1.17em; 
+    margin:1em 0;
+}
+h4 {
+    font-size:1em; 
+    margin:1.33em 0;
+}
+h5,h6 {
+    font-size:0.83em; /*1*/
+    margin:1.67em 0;
+}

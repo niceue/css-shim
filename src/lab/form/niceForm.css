@@ -1,0 +1,102 @@
+/* 按钮 */
+a.btn {
+    display: inline-block; *display: inline; *zoom: 1;
+	padding: .2em 1em;
+	margin:0 .2em;
+    line-height: 2em;
+	color: #333;
+    font-weight: bold;
+    text-shadow: 0 1px #fff;
+	background-image: -webkit-linear-gradient(top, #fff, #ccc); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #fff, #ccc); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #fff, #ccc); /* IE10+ */
+	background-image:      -o-linear-gradient(top, #fff, #ccc); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #fff, #ccc);
+	          filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0); /* IE6–IE9 */
+	border: 1px solid;
+	border-color: #ccc #aaa #aaa #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+a.btn:hover{
+	color: #000;
+	text-decoration: none;
+	background-image: -webkit-linear-gradient(top, #fff, #bbb); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #fff, #bbb); /* FF3.6+ */
+	background-image:     -ms-linear-gradient(top, #fff, #bbb); /* IE10+ */
+	background-image:      -o-linear-gradient(top, #fff, #bbb); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #fff, #bbb);
+	          filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ffffff', endColorstr='#bbbbbb',GradientType=0); /* IE6–IE9 */
+	border-color: #aaa #888 #888 #aaa;
+}
+a.btn:active {
+	background-image: -webkit-linear-gradient(top, #bbb, #fff); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #bbb, #fff); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #bbb, #fff); /* IE10 */
+	background-image:      -o-linear-gradient(top, #bbb, #fff); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #bbb, #fff);
+	          filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#bbbbbb', endColorstr='#ffffff',GradientType=0); /* IE6–IE9 */
+	border-color: #888 #aaa #aaa #888;
+}
+
+input[type='text'],  
+input[type='tel'], 
+input[type='url'], 
+input[type='email'], 
+input[type='password'], 
+input[type='number'], 
+input[type^='date'], 
+input[type='month'], 
+input[type='week'], 
+input[type='time'],
+textarea {
+	padding: .2em;
+	height:18px;
+	line-height:18px;
+	color: #555;
+	border: 1px solid #BDBDBD;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+input[type='text']:focus, 
+input[type='tel']:focus, 
+input[type='url']:focus, 
+input[type='email']:focus, 
+input[type='password']:focus, 
+input[type='number']:focus, 
+input[type^='date']:focus, 
+input[type='month']:focus, 
+input[type='week']:focus, 
+input[type='time']:focus, 
+a.btn:focus,
+textarea:focus {
+	border-color: #54A1CB;
+	color: #000;
+	outline:0 none;
+	-moz-box-shadow: 0 0 4px rgba(84,161,203,.5);
+	box-shadow: 0 0 4px rgba(84,161,203,.5);
+	-webkit-transition:box-shadow .2s linear 0s;
+	-moz-transition:box-shadow .3s linear 0s;
+	-ms-transition:box-shadow .3s linear 0s;
+	-o-transition:box-shadow .3s linear 0s;
+	transition:box-shadow .3s linear 0s;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+textarea {height:6em}
+input.text {height:18px;}
+.text {padding:.2em; line-height:18px; outline:0; color: #555; border: 1px solid #BDBDBD;}
+input.focus,textarea.focus {padding:.2em; border: 1px solid #54A1CB; color: #000;}
+
+:-moz-placeholder {color:#A9A9A9;}
+input.placeholder {color:#A9A9A9;}

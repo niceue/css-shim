@@ -1,0 +1,10 @@
+/*
+(CC) 2012, Jony (www.niceue.com), MIT Licensed
+*/
+fieldset {border:1px solid #c0c0c0; margin:0 2px; padding:0.35em 0.625em 0.75em}
+legend {padding:0 2px; *margin-left:-7px}
+input,button,textarea,select,label {margin:0; font:12px tahoma,arial,simsun,sans-serif; vertical-align:middle}
+button::-moz-focus-inner,input::-moz-focus-inner {border:0; padding:0}
+textarea {resize:vertical; overflow-y:auto; vertical-align:top}
+select {height:22px; line-height:18px; padding:2px 0}
+option {background:#fff}

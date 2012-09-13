@@ -1,0 +1,18 @@
+/* Serif */
+gerogia   : Georgia, Times, 'Times New Roman', serif;
+times     : Times, "Times New Roman", serif;
+palatino  : Palatino, 'Palatino Linotype', 'Hoefler Text', Times, 'Times New Roman', serif;
+
+/* Sans serif */
+helvetica : "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+arial     : "Arial Unicode MS", Arial, Helvetica, sans-serif;
+verdana   : Verdana, Tahoma, Arial, sans-serif;
+lucida    : "Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Verdana, sans-serif;
+   
+/* Monospace */
+consolas  : Consolas, "Lucida Console", Monaco, "Courier New", Courier, mono;
+courier   : "Courier New", Courier, mono;
+monaco    : Monaco, "Courier New", Courier, mono;
+
+/* Unicode */
+unicode    : "Arial Unicode MS", Arial, "Microsoft Sans Serif", "Lucida Grande", sans-serif;

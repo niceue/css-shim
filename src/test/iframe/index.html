@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<title> Iframe Test</title>
+<style type="text/css">
+body {background:#ccc; font:12px/1.5 tahoma,arial,simsun,sans-serif;}
+h2 {font-size:1.8em; margin: 1.2em 0 .2em;}
+pre {font-family:'courier new',monospace;font-family:'courier new',monospace; margin:5px 0}
+table {border-collapse:collapse}
+th,td {border:1px soldi #333; padding:3px 5px;}
+.demo {background:#000; color:#fff;}
+.code {background:#eee;padding:5px; border:1px solid #090;}
+
+#iframe1,#iframe2,#ifrmae3 {width:500px; height:100px;}
+#iframe1 {}
+#iframe2 {vertical-align:top; border:0}
+#iframe3 {}
+</style>
+</head>
+<body>
+<h2>原始iframe</h2>
+<div class="demo">
+<iframe src="page.html" id="iframe1">您的浏览器貌似不支持iframe</iframe>
+</div>
+
+
+<h2>移除iframe的边框和底部间距</h2>
+<pre class="code">
+ * 移除底部间距的3中方法：(测试发现vertical-align:middle;在IE6下导致上下错位1像素),这里选择的是vertical-align:top
+ * 1. vertical-align:bottom;
+ * 2. vertical-align:top;
+ * 3. display:block;
+
+ &lt;iframe src="page.html" id="iframe2" frameborder=0&gt;&lt;/iframe&gt;
+</pre>
+<div class="demo">
+<iframe src="page.html" id="iframe2" frameborder=0></iframe>
+</div>
+
+
+<h2>iframe的行内表现</h2>
+<pre class="code">
+&lt;iframe src="page.html" style="width:200px;height:50px"&gt;&lt;/iframe&gt;
+&lt;iframe src="page.html" style="width:200px;height:30px"&gt;&lt;/iframe&gt;
+&lt;iframe src="page.html" style="width:200px;height:50px"&gt;&lt;/iframe&gt;
+</pre>
+<div class="demo">
+<iframe src="page.html" style="width:200px;height:50px"></iframe>
+<iframe src="page.html" style="width:200px;height:30px"></iframe>
+<iframe src="page.html" style="width:200px;height:50px"></iframe>
+</div>
+
+
+<h2>使iframe在IE下也透明</h2>
+<pre class="code">
+ * 给iframe设置allowTransparency="true"
+
+&lt;iframe src="blank.html" id="iframe3" height="100" allowTransparency="true"&gt;&lt;/iframe&gt;
+</pre>
+<div class="demo">
+<iframe src="blank.html" id="iframe3" height=100 allowTransparency="true"></iframe>
+</div>
+</body>
+</html>
