@@ -6,7 +6,7 @@
 /*
  * 清除浮动
  */
-.cf {*zoom:1} 
+.cf {*zoom:1}
 .cf:after {display:block;content:'\20';height:0;clear:both}
 
 
@@ -15,7 +15,7 @@
  * 1. 针对IE6/7的定义
  */
 .inline-block {
-    display:inline-block; 
+    display:inline-block;
     *display:inline; *zoom:1;  /*1*/
 }
 
@@ -30,10 +30,10 @@
  * 友好的隐藏（隐藏元素但是屏幕阅读器可见）
  * 1. 针对IE6/7的定义
  */
-.hiding {
-    position:absolute !important; 
-    clip:rect(1px 1px 1px 1px);  /*1*/
+.clip-hide {
+    position:absolute !important;
     clip:rect(1px,1px,1px,1px);
+    *clip:rect(1px 1px 1px 1px);  /*1*/
 }
 
 

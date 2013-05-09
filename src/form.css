@@ -24,21 +24,30 @@ legend {
 
 /*
  * 1. 去除IE6/7, FF3+, S5, Chrome默认的margin
- * 2. 解决IE6/7不能继承字体样式
- * 3. 在不同浏览器，label与input(特别是checkbox和radio)总是不能对齐，这里统一了各个浏览器的表现
+ * 2. 在不同浏览器，label与input(特别是checkbox和radio)总是不能对齐，这里统一了各个浏览器的表现
+ * 3. 解决IE6/7不能继承字体样式
  */
 input,button,textarea,select,label {
     margin:0;  /*1*/
-    font-size:100%;  /*2*/
-    vertical-align:middle;  /*3*/
+    vertical-align:middle;  /*2*/
+    font-size:100%;  /*3*/
+    font-family: inherit; /*3*/
 }
 
+/*
+ * 去除OS X下search框的内padding和取消按钮
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
 
 /*
  * 去除FF3+内补丁和内边框
  */
-button::-moz-focus-inner,input::-moz-focus-inner {
-    border:0; 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border:0;
     padding:0;
 }
 
@@ -64,5 +73,5 @@ textarea {
 select {
     height:22px;  /*1*/
     line-height:18px;  /*2*/
-    padding:2px 0;  /*2*3*/  
+    padding:2px 0;  /*2*3*/
 }

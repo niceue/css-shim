@@ -5,7 +5,7 @@
 /*
  * 纠正IE6/7/8下block元素未定义
  */
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
     display:block;
 }
 
@@ -13,8 +13,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{
 /*
  * 纠正IE6/7/8下inline-block元素未定义
  */
-audio,canvas,video{
-    display:inline-block; 
+audio,canvas,video {
+    display:inline-block;
     *display:inline; *zoom:1;
 }
 
@@ -41,7 +41,7 @@ audio:not([controls]) {
 /*
  * 纠正IE9中overflow不正确
  */
-svg:not(:root){
+svg:not(:root) {
     overflow:hidden;
 }
 
@@ -49,7 +49,7 @@ svg:not(:root){
 /*
  * 去除默认margin
  */
-figure{
+figure {
     margin:0;
 }
 
@@ -57,7 +57,7 @@ figure{
 /*
  * 纠正IE6/7/8样式不正确
  */
-mark{
+mark {
     background:#ff0;
     color:#000;
 }

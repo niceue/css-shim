@@ -1,6 +1,5 @@
-/*
+/*!
  * normal.css
- * Nice比较推崇的核心样式文件，以统一浏览器基础表现和减小开发难度为目的
  * (CC) 2012, Jony (www.niceue.com), MIT Licensed
  */
 /*
@@ -10,9 +9,8 @@
     3. 更好的用户体验
 
    Nice参考了一些有名的框架，如normalize、minimum-page、YUI、kissy，
-   好的东西会经过测试后吸收过来，每一个元素都经过了主流浏览器的测试，不会想当然的编写代码
-   当然，Nice也不是完美的，如果大家发现了问题，欢迎指正。
-   可以通过mail（zj86@foxmail.com） 或者到git（https://github.com/niceue/Nice）提交issue
+   好的东西会经过测试后吸收过来，每一个元素都经过了主流浏览器的测试
+   提交问题：https://github.com/niceue/Nice/issues
 
    注释说明中，“IE”指代“Internet Explorer”，“Ch”指代“Google Chrome”，“FF”指代“Firefox”，“Op”指代“Opera”，“Sa”指代Safari
  */
@@ -31,9 +29,11 @@
 
 /*
  * 1. 10px = 1em = 100% = 8pt
+ * 2. 解决IE6下内容振动
  */
 html {
     font-size:62.5%;  /*1*/
+    _background:url(about:blank) fixed;
 }
 
 
@@ -170,14 +170,15 @@ sub{bottom:-0.25em}
 
 
 /*
- * 1. 去除IE6/7, FF3+, Sa5, Ch默认的margin
- * 2. 解决IE6/7不能继承字体样式
- * 3. 在不同浏览器，label与input(特别是checkbox和radio)总是不能对齐，这里统一了各个浏览器的表现
+ * 1. 去除IE6/7, FF3+, S5, Chrome默认的margin
+ * 2. 在不同浏览器，label与input(特别是checkbox和radio)总是不能对齐，这里统一了各个浏览器的表现
+ * 3. 解决IE6/7不能继承字体样式
  */
 input,button,textarea,select,label {
     margin:0;  /*1*/
-    font-size:100%;  /*2*/
-    vertical-align:middle;  /*3*/
+    vertical-align:middle;  /*2*/
+    font-size:100%;  /*3*/
+    font-family: inherit; /*3*/
 }
 
 
@@ -203,22 +204,21 @@ a:hover {text-decoration:underline}
 /*
  * 纠正IE6/7下h1~h6的font-size和margin与其他浏览器表现不同
  * 1. h6字体(12px * 0.67 = 8px)太小看不清楚，保持和h5字体(12px * 0.83 = 10px)一致
- *    注：实际上h5与h6很少会用到
  */
 h1 {
-    font-size:2em; 
+    font-size:2em;
     margin:0.67em 0;
 }
 h2 {
-    font-size:1.5em; 
+    font-size:1.5em;
     margin:0.83em 0;
 }
 h3 {
-    font-size:1.17em; 
+    font-size:1.17em;
     margin:1em 0;
 }
 h4 {
-    font-size:1em; 
+    font-size:1em;
     margin:1.33em 0;
 }
 h5,h6 {
